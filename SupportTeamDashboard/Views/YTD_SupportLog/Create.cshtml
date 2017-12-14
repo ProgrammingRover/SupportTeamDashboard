@@ -1,0 +1,103 @@
+﻿@model SupportTeamDashboard.Models.YTD_SupportLog
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>YTD_SupportLog</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Quarter" class="control-label"></label>
+                <input asp-for="Quarter" class="form-control" />
+                <span asp-validation-for="Quarter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupportTicketDate" class="control-label"></label>
+                <input asp-for="SupportTicketDate" class="form-control" />
+                <span asp-validation-for="SupportTicketDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AfterHours" class="control-label"></label>
+                <input asp-for="AfterHours" class="form-control" />
+                <span asp-validation-for="AfterHours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupportTicketType" class="control-label"></label>
+                <input asp-for="SupportTicketType" class="form-control" />
+                <span asp-validation-for="SupportTicketType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PartnerName" class="control-label"></label>
+                <input asp-for="PartnerName" class="form-control" />
+                <span asp-validation-for="PartnerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnvironmentAffected" class="control-label"></label>
+                <input asp-for="EnvironmentAffected" class="form-control" />
+                <span asp-validation-for="EnvironmentAffected" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupportTeamMember" class="control-label"></label>
+                <input asp-for="SupportTeamMember" class="form-control" />
+                <span asp-validation-for="SupportTeamMember" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupportTicketCategory" class="control-label"></label>
+                <input asp-for="SupportTicketCategory" class="form-control" />
+                <span asp-validation-for="SupportTicketCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupportTicketSubCategory" class="control-label"></label>
+                <input asp-for="SupportTicketSubCategory" class="form-control" />
+                <span asp-validation-for="SupportTicketSubCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupportTicketIssueDetails" class="control-label"></label>
+                <input asp-for="SupportTicketIssueDetails" class="form-control" />
+                <span asp-validation-for="SupportTicketIssueDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupportTicketResolutionDetails" class="control-label"></label>
+                <input asp-for="SupportTicketResolutionDetails" class="form-control" />
+                <span asp-validation-for="SupportTicketResolutionDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QATimeSpent" class="control-label"></label>
+                <input asp-for="QATimeSpent" class="form-control" />
+                <span asp-validation-for="QATimeSpent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PTTimeSpent" class="control-label"></label>
+                <input asp-for="PTTimeSpent" class="form-control" />
+                <span asp-validation-for="PTTimeSpent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DevTimeSpent" class="control-label"></label>
+                <input asp-for="DevTimeSpent" class="form-control" />
+                <span asp-validation-for="DevTimeSpent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalTimeSpent" class="control-label"></label>
+                <input asp-for="TotalTimeSpent" class="form-control" />
+                <span asp-validation-for="TotalTimeSpent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

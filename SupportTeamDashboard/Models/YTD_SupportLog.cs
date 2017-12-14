@@ -7,7 +7,7 @@ namespace SupportTeamDashboard.Models
 {
     public class YTD_SupportLog
     {
-        public int SupportTicketID { get; set; }
+        public int ID { get; set; }
         public string Quarter { get; set; }
         public DateTime SupportTicketDate { get; set; }
         public string AfterHours { get; set; }

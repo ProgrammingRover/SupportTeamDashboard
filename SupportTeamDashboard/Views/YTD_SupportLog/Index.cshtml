@@ -1,0 +1,119 @@
+﻿@model IEnumerable<SupportTeamDashboard.Models.YTD_SupportLog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quarter)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupportTicketDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AfterHours)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupportTicketType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PartnerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EnvironmentAffected)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupportTeamMember)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupportTicketCategory)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupportTicketSubCategory)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupportTicketIssueDetails)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupportTicketResolutionDetails)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QATimeSpent)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PTTimeSpent)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DevTimeSpent)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalTimeSpent)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quarter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupportTicketDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AfterHours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupportTicketType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartnerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnvironmentAffected)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupportTeamMember)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupportTicketCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupportTicketSubCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupportTicketIssueDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupportTicketResolutionDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QATimeSpent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PTTimeSpent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DevTimeSpent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalTimeSpent)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

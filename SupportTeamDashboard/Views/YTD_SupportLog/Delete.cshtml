@@ -1,0 +1,111 @@
+﻿@model SupportTeamDashboard.Models.YTD_SupportLog
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>YTD_SupportLog</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quarter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupportTicketDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupportTicketDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AfterHours)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AfterHours)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupportTicketType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupportTicketType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PartnerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PartnerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EnvironmentAffected)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EnvironmentAffected)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupportTeamMember)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupportTeamMember)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupportTicketCategory)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupportTicketCategory)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupportTicketSubCategory)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupportTicketSubCategory)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupportTicketIssueDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupportTicketIssueDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupportTicketResolutionDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupportTicketResolutionDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QATimeSpent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QATimeSpent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PTTimeSpent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PTTimeSpent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DevTimeSpent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DevTimeSpent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalTimeSpent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalTimeSpent)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
