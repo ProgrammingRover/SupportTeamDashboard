@@ -1,0 +1,112 @@
+﻿@model SupportTeamDashboard.Models.SupportTicket
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>SupportTicket</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TicketDate" class="control-label"></label>
+                <input asp-for="TicketDate" class="form-control" />
+                <span asp-validation-for="TicketDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectType" class="control-label"></label>
+                <input asp-for="ProjectType" class="form-control" />
+                <span asp-validation-for="ProjectType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketStatus" class="control-label"></label>
+                <input asp-for="TicketStatus" class="form-control" />
+                <span asp-validation-for="TicketStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketUrgency" class="control-label"></label>
+                <input asp-for="TicketUrgency" class="form-control" />
+                <span asp-validation-for="TicketUrgency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupportTeamMember" class="control-label"></label>
+                <input asp-for="SupportTeamMember" class="form-control" />
+                <span asp-validation-for="SupportTeamMember" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WhoIsCaller" class="control-label"></label>
+                <input asp-for="WhoIsCaller" class="form-control" />
+                <span asp-validation-for="WhoIsCaller" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CallerNumber" class="control-label"></label>
+                <input asp-for="CallerNumber" class="form-control" />
+                <span asp-validation-for="CallerNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CallerEmail" class="control-label"></label>
+                <input asp-for="CallerEmail" class="form-control" />
+                <span asp-validation-for="CallerEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketSubject" class="control-label"></label>
+                <input asp-for="TicketSubject" class="form-control" />
+                <span asp-validation-for="TicketSubject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketDescription" class="control-label"></label>
+                <input asp-for="TicketDescription" class="form-control" />
+                <span asp-validation-for="TicketDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketResolution" class="control-label"></label>
+                <input asp-for="TicketResolution" class="form-control" />
+                <span asp-validation-for="TicketResolution" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="FollowUpRequired" /> @Html.DisplayNameFor(model => model.FollowUpRequired)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="VoicemailCallback" /> @Html.DisplayNameFor(model => model.VoicemailCallback)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketCategory" class="control-label"></label>
+                <input asp-for="TicketCategory" class="form-control" />
+                <span asp-validation-for="TicketCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketSubCategory" class="control-label"></label>
+                <input asp-for="TicketSubCategory" class="form-control" />
+                <span asp-validation-for="TicketSubCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalTimeSpent" class="control-label"></label>
+                <input asp-for="TotalTimeSpent" class="form-control" />
+                <span asp-validation-for="TotalTimeSpent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

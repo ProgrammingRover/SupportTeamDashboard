@@ -1,0 +1,114 @@
+﻿@model SupportTeamDashboard.Models.SupportTicket
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SupportTicket</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TicketDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TicketStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketUrgency)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TicketUrgency)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupportTeamMember)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupportTeamMember)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WhoIsCaller)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WhoIsCaller)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CallerNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CallerNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CallerEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CallerEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketSubject)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TicketSubject)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TicketDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketResolution)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TicketResolution)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FollowUpRequired)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FollowUpRequired)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VoicemailCallback)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VoicemailCallback)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketCategory)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TicketCategory)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketSubCategory)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TicketSubCategory)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalTimeSpent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalTimeSpent)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

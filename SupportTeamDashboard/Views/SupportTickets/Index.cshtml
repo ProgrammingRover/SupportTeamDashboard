@@ -1,0 +1,125 @@
+﻿@model IEnumerable<SupportTeamDashboard.Models.SupportTicket>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TicketDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProjectType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TicketStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TicketUrgency)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupportTeamMember)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WhoIsCaller)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CallerNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CallerEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TicketSubject)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TicketDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TicketResolution)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FollowUpRequired)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VoicemailCallback)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TicketCategory)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TicketSubCategory)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalTimeSpent)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketUrgency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupportTeamMember)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WhoIsCaller)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CallerNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CallerEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketSubject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketResolution)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FollowUpRequired)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoicemailCallback)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketSubCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalTimeSpent)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
